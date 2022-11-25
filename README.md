@@ -9,8 +9,8 @@
 [![Github issues](https://img.shields.io/github/issues/aiogram/aiogram.svg?style=flat-square)](https://github.com/[aiogram/aiogram](https://github.com/icnhndl/Thomas-Story)/issues)
 [![MIT License](https://img.shields.io/pypi/l/aiogram.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-##Игра-бродилка с тестами по школьной программе
-###Игра предназначена для:
+##Игра-бродилка с тестами по школьной программе##
+###Игра предназначена для:###
 • пользователей ПК
 • подростков
 • школьников
