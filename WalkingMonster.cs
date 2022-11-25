@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WalkingMonster : Entity
 {
-    private float speed = 0.1f;
-    private Vector3 dir; 
+    private double speed = 0.1f;
+    private Vector3 direection; 
     private SpriteRenderer sprite;
     private Rigidbody2D rb;
 
@@ -16,8 +16,8 @@ public class WalkingMonster : Entity
 
     private void Start()
     {
-        lives = 5;
-        dir = transform.right;
+        lives = 10;
+        direction = transform.right;
     }
 
     private void Update()
@@ -27,11 +27,11 @@ public class WalkingMonster : Entity
     private void Move()
     {
 
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position + transform.up * 0.1f + transform.right * dir.x * 0.7f, 0.1f);
-        if (colliders.Length > 0) dir *= -1;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position + transform.up * 0.1f + transform.right * direction.x * 0.7f, 0.1f);
+        if (colliders.Length > 0) direction *= -1;
 
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, Time.deltaTime);
-        sprite.flipX = dir.x > 0.0f;
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, Time.deltaTime);
+        sprite.flipX = direction.x > 0.0f;
 
 
 
