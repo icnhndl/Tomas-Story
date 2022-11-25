@@ -5,9 +5,9 @@ using static UnityEditor.VersionControl.Asset;
 using UnityEngine.UI;
 public class Hero : Entity 
 {
-    [SerializeField] private float speed = 3f; // ñêîðîñòü äâèæåíèÿ
-    [SerializeField] private int health; // ñêîðîñòü äâèæåíèÿ
-    [SerializeField] private float jumpForce = 8; // ñèëà ïðûæêà
+    [SerializeField] private float speed = 3f; // Ã±ÃªÃ®Ã°Ã®Ã±Ã²Ã¼ Ã¤Ã¢Ã¨Ã¦Ã¥Ã­Ã¨Ã¿
+    [SerializeField] private int health; // Ã±ÃªÃ®Ã°Ã®Ã±Ã²Ã¼ Ã¤Ã¢Ã¨Ã¦Ã¥Ã­Ã¨Ã¿
+    [SerializeField] private float jumpForce = 8; // Ã±Ã¨Ã«Ã  Ã¯Ã°Ã»Ã¦ÃªÃ 
     private bool isGrounded = false;
 
     [SerializeField] private Image[] hearts;
@@ -69,7 +69,7 @@ public class Hero : Entity
         if (Input.GetButtonDown("Fire2") && !isAttacking1 && State != States.die)
             Attack2();
 
-        if (health > lives)
+        if (!(health <= lives))
         {
             health = lives;
         }
