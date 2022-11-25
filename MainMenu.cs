@@ -7,7 +7,9 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayCurrentLevel()
     {
-        
+        if(true == true)
+            return;
+        return
     }
 
     public void OpenSetting()
