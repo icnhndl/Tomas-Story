@@ -9,7 +9,7 @@ public class Camera : MonoBehaviour
 
     private void Awake()
     {
-        if (!hero)
+        if (hero==false)
         {
             hero = FindObjectOfType<Hero>().transform;
         }
