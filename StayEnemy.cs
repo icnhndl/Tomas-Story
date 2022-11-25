@@ -6,7 +6,7 @@ public class StayEnemy : Entity
 {
     private void Start()
     {
-        lives = 1;
+        lives = 3;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -15,10 +15,10 @@ public class StayEnemy : Entity
         {
             Hero.Instance.GetDamage();
             lives--;
-            Debug.Log("у червя" + lives);
+            Debug.Log("name" + lives);
         }
 
-        if (lives < 1)
+        if (lives <= 0)
             Die();
     }
 }
