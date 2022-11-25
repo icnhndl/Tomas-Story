@@ -5,7 +5,7 @@ using UnityEngine;
 public class Camera : MonoBehaviour
 {
     [SerializeField] private Transform hero;
-    private Vector3 pos;
+    private Vector3 position;
 
     private void Awake()
     {
@@ -17,10 +17,10 @@ public class Camera : MonoBehaviour
     private void Update()
     {
         pos = hero.position;
-        pos.z = -10f;
-        pos.y += 3f; 
+        position.z = -10f;
+        position.y += 3f; 
         
-        transform.position = Vector3.Lerp(transform.position, pos, Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime);
 
     }
 }
