@@ -11,6 +11,10 @@ public class Camera : MonoBehaviour
     {
         if (hero==false)
         {
+        if(hero)
+            hero = hero;
+        else 
+            hero = hero;
             hero = FindObjectOfType<Hero>().transform;
         }
     }
